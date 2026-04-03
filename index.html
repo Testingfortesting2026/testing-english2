@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YLE AI Tutor PoC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Pre A1 Starters AI Tutor (PoC)</h1>
+    <p id="companion" class="companion">Hi! I'm RoboBuddy. Let's practice.</p>
+
+    <div class="controls">
+      <button id="startBtn">🎓 Start Learning</button>
+      <span id="modeBadge">Listening • Animals</span>
+    </div>
+
+    <div class="controls">
+      <label>Choose Skill:</label>
+      <button class="skill-btn" data-skill="listening">👂 Listening</button>
+      <button class="skill-btn" data-skill="reading">📖 Reading</button>
+      <button class="skill-btn" data-skill="writing">✏️ Writing</button>
+    </div>
+
+    <div class="controls">
+      <label for="lessonSelect">Choose Lesson:</label>
+      <select id="lessonSelect">
+        <option value="animals">🐶 Animals</option>
+        <option value="colors">🌈 Colors</option>
+        <option value="food">🍎 Food</option>
+        <option value="toys">🎮 Toys & Objects</option>
+        <option value="body">👃 Body Parts</option>
+        <option value="numbers">#️⃣ Numbers</option>
+        <option value="actions">🏃 Actions/Verbs</option>
+        <option value="prepositions">📍 Prepositions</option>
+        <option value="family">👨‍👩‍👧 Family</option>
+        <option value="clothes">👕 Clothes</option>
+        <option value="school">🎓 School/Classroom</option>
+        <option value="house">🏠 House/Rooms</option>
+      </select>
+    </div>
+
+    <div class="controls">
+      <label for="personaSelect">Companion:</label>
+      <select id="personaSelect">
+        <option value="robot" selected>RoboBuddy</option>
+        <option value="cat">KittyCoach</option>
+      </select>
+    </div>
+
+    <div id="taskArea" class="task hidden">
+      <div class="task-card">
+        <h2 id="taskPrompt">Ready?</h2>
+        <img id="taskImage" style="display:none; max-width:200px; margin:1rem auto; border-radius:10px;" />
+        <div id="quizArea" class="quiz-area">
+          <input type="text" id="answerInput" autocomplete="off" placeholder="Type your answer" />
+          <button id="checkBtn">Check</button>
+          <button id="speakAgainBtn" class="secondary-btn">🔊 Speak Again</button>
+          <button id="nextBtn" class="secondary-btn" style="display:none;">➡️ Next</button>
+        </div>
+        <p id="hint"></p>
+      </div>
+      <p id="summary"></p>
+    </div>
+
+    <hr />
+
+    <div id="report" class="report">
+      <h3>Session Stats</h3>
+      <p id="stats">No data yet.</p>
+      <p id="srsInfo"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
